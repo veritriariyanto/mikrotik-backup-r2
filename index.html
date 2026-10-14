@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backup MikroTik</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem}
+  table{width:100%;border-collapse:collapse;margin-top:.5rem}
+  th,td{text-align:left;padding:.5rem;border-bottom:1px solid #ddd;word-break:break-all}
+  th{background:#f5f5f5}
+  td form{margin:0}
+  button{padding:.4rem .9rem;font:inherit;cursor:pointer}
+  pre{background:#111;color:#eee;padding:1rem;overflow-x:auto;white-space:pre-wrap}
+  pre:empty{display:none}
+</style>
+</head>
+<body>
+<h1>Backup MikroTik</h1>
+<p>Siswa: <b>$nama</b> &middot; Router: <b>$router</b></p>
+<form method="post" action="/backup" onsubmit="this.querySelector('button').disabled=true">
+  <button>Backup sekarang</button>
+</form>
+<pre>$log</pre>
+
+<h2>Backup saya</h2>
+<table>
+  <tr><th>File</th><th>Ukuran</th><th>Diunggah</th><th></th></tr>
+  $file_rows
+</table>
+</body>
+</html>
