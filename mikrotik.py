@@ -9,7 +9,9 @@ import os
 import sys
 import tempfile
 
+#untuk upload ke R2
 import boto3
+#untuk SSH ke router
 import paramiko
 
 DIR = os.path.dirname(os.path.abspath(__file__))
